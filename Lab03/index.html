@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous"
+		/>
+
+		<title>Lab03</title>
+
+    <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+    	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"
+    ></script>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: pink;">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+    </nav>
+    <!-- button -->
+    <a href="https://www.google.com/"><button type="button" class="btn btn-outline-primary" style="width:33%">goooogle</button></a>
+    <a href="https://zh.wikipedia.org/wiki/Wiki"><button type="button" class="btn btn-outline-success"  style="width:33%">wiiki</button></a>
+    <a href="https://www.reddit.com/r/obeyme/comments/st2rp4/certainly/"><button type="button" class="btn btn-outline-danger"  style="width:33%">reddit</button></a>
+    <!-- <button type="button" class="btn btn-outline-secondary">Secondary</button> -->
+    
+    
+    <!-- <button type="button" class="btn btn-outline-warning">Warning</button>
+    <button type="button" class="btn btn-outline-info">Info</button>
+    <button type="button" class="btn btn-outline-light">Light</button>
+    <button type="button" class="btn btn-outline-dark">Dark</button> -->
+    <!-- carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-interval="100">
+            <img src="./carousel/IB7kXkz.png" class="d-block" alt="..." style="width:100%; height: 750px; "> 
+          </div>
+          <div class="carousel-item" data-interval="100">
+            <img src="./carousel/mammon.jpg" class="d-block" alt="..." style="width:100%;  height: 750px;">
+          </div>
+          <div class="carousel-item" data-interval="100">
+            <img src="./carousel/simeon and solomn.jpg" class="d-block"  alt="..." style="width:100%;  height: 750px;">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <!-- modal -->
+
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" style="color: yellow; width: 100%;">
+    im a modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Depressed DAY</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          damn<br>
+          im pretty<br>
+          pretty<br>
+          depressed
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">im depressed, too</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- grid -->
+    <div class="row" id="photo-g">
+        <div class="col col-lg-3 col-md-6 col-sm-12 photo-c">
+            <div class="photo-sm"><img src="./carousel/mammon.jpg" alt=""></div>
+            
+            <div class="photo-b"><img src="./carousel/simeon and solomn.jpg" alt=""></div>
+          </div>
+          <div class="col col-lg-3 col-md-6 col-sm-12 photo-c">
+            <div class="photo-b"><img src="./carousel/IB7kXkz.png" alt=""></div>
+
+            <div class="photo-sm"><img src="./carousel/mammon.jpg" alt=""></div>
+          </div>
+          <div class="col col-lg-3 col-md-6 col-sm-12 photo-c">
+            <div class="photo-sm"><img src="./carousel/IB7kXkz.png" alt=""></div>
+            
+            <div class="photo-b"><img src="./carousel/simeon and solomn.jpg" alt=""></div>
+          </div>
+          <div class="col col-lg-3 col-md-6 col-sm-12 photo-c">
+            <div class="photo-b"><img src="./carousel/IB7kXkz.png" alt=""></div>
+            <div class="photo-sm"><img src="./carousel/mammon.jpg" alt=""></div>
+          </div>
+    </div>
+    <iframe class="video" src="https://www.youtube.com/embed/Zx2CBt72Ji8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>

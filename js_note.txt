@@ -1,0 +1,357 @@
+console.log(a)			// output: undefined
+
+var a = 3;
+console.log(a) 			// output: 3
+//can use a var before declaring
+----------------------------------------
+try{
+}
+catch(e){
+}
+finally{
+}
+----------------------------------------
+var: in function:life scope in func
+     out func: its a global var
+	Global Scoped or func scoped
+	Can update and redeclare
+let: Block-scoped local var
+	can update , no redeclare
+const: Need to be initialized
+	 Cant be changed
+	 Block-scoped local var, like let.
+	 No update redeclare
+----------------------------------------
+let x = 1;
+
+if (x === 1) {
+  let x = 2;
+
+  console.log(x); // expected output: 2
+}
+
+console.log(x);  // expected output: 1
+---------------------------------------
+string:enclosed by single (‘) /double (") quotation
+Use (+) operator to concatenate strings
+--------------------------------------
+Represent a character using its corresponding Unicode
+Syntax: \u[Unicode]
+alert("U0041 is \u0041");
+------------------------------------------
+HTML Tag in String
+document.write("First line<br>Second line"); 
+-----------------------------------
+JS HTML Wrapper Functions
+var firstLine = "First line"; 
+var secondLine = "Second line"; 
+document.write(firstLine.small() + "<br>" + 
+		secondLine.big());
+---------------------------------------
+//can use a decimal, hexadecimal, or scientific notation to indicate a number
+//default are stored in floating-point 
+var numHex = 0xabcd;        // hex format
+var numExp = 123e-5;        // scientific format
+
+document.write("0xabcd is " + numHex + "<br>");
+document.write("123e-5 is " + numExp);
+------------------------------------------
+A strict comparison (e.g., ===) :of the same type and the contents match
+An abstract comparison (e.g., ==) :converts the operands to the same type before making the comparison
+-------------------------------------------
+//Object
+var person = {
+  firstName : "John",
+  lastName : "Doe",
+  id : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+-----------------------------------------------
+console.log(person.firstName); // output “John”
+console.log(person[“firstName”]); // output “John”
+
+console.log(person.fullName()); 
+// output “John Doe”
+----------------------------------------------
+can put different types of data in an array
+var person = ["John", "Doe", 46];
+------------------------
+var person = ["John", "Doe", 46];
+
+console.log(person.length);
+-------------------------
+There are some built-in Array operations:
+push
+pop
+sort
+reverse
+toString
+---------------------------
+var a = Math.random();
+
+a < 0.3 ? console.log("a < 0.3") :
+    a < 0.6 ? console.log("0.3 =< a < 0.6") :
+        console.log("a >= 0.6")
+--------------------------------------------
+A JS function is declared with the keyword function
+function name (parameter1, parameter2, …) {
+  // code to be executed
+}
+//function can be used before its declaration and definition
+----------------------------------------------
+A function can be assigned to a variable
+When you assigned a function to a variable, you cannot call the function by its function name
+
+var funVar = function fun () {
+   console.log("Hello");
+};
+
+funVar(); // Correct!
+fun();      //  Wrong! The system will throw an error message
+---------------------------------------
+If the parameter is an object, it will be passed by reference, otherwise passed by value
+------------------------------------------
+can assign initial values to the parameters
+
+function multiply (arg1 = 3, arg2 = 4) {
+    console.log(arg1 * arg2);
+}
+-------------------------------------
+Function() Constructor
+Syntax: 
+Function("arg1", "arg2", …, "function body")
+
+// using Function() constructor
+var multiply = new Function("arg1", "arg2",
+ "console.log(arg1 * arg2);");
+-----------------------------------------
+An anonymous function is a function that is declared without a named identifier
+assign it to a variable
+
+use for anonymous functions is as a closure
+self-invoking function
+(function (arg1, arg2) {
+    console.log(arg1 * arg2);
+}) ();
+
+---------------------------------------
+Arrow Function
+
+var func1 = function(x, y) {
+	return x * y;
+};
+var func2 = (x, y) => { 
+	return x * y;
+};
+// func1 and func2 are the same.
+--------------------------------------------
+
+Closure
+var add = (function () {
+  var counter = 0;
+  return function () {counter += 1; return counter}
+})();
+
+// Call add() 3 times
+add(); add(); add();
+
+// The counter is now 3!
+---------------------------------------------
+object initializer
+var person = {
+    name: 'Bob',
+    birthday: '2011/1/1',
+    'phone-number': '0912345678',
+    who: function () {
+        return this.name;
+    }
+};
+/*
+If object key contains non-standard character like "-", use quotation(' or ") to define it
+(phone number)
+*/
+------------------------------------------------
+person.nationality = "English";   // adding a new property
+person.InfoAll = function () {      // adding a new method
+  return this. name  + " " + this. birthday; };
+-----------------------------------------------------------------------
+Object Accessors
+var person = {
+    name: 'Bob',
+    birthday: '2011/1/1’,
+    height: 170,
+    'phone-number': '0912345678',
+    who: function () {
+        return this.name;
+    }
+    get myHeight() {return this.height; }
+};
+
+var height = person.myHeight;    // use it without "()"
+-------------------------------------------------------------------
+var person = {
+    name: 'Bob',
+    birthday: '2011/1/1’,
+    height: 170,
+    'phone-number': '0912345678',
+    who: function () {
+        return this.name;
+    }
+    set changeHeight(newHeight) {    this.height = newHeight * 1.05;    }
+};
+
+person.changeHeight = 180;
+-------------------------------------------------------------------------
+object.create()
+prototype object
+var person = {
+    name: 'Bob',
+    birthday: '2011/1/1',
+    'phone-number': '0912345678',
+    who: function () {
+        return this.name;
+    }
+};
+
+var person2 = Object.create(person);
+person2.name = 'John';
+person2.who(); 
+----------------------------------------------------------------------
+without create:
+var person = {
+    name: 'Bob’,
+    …
+};
+
+var person2 = person;     // person2 is a reference of person
+person2.name = 'John’;	
+person2.who();                // output: John
+person.who();                  // output: John
+
+two people all become John)
+------------------------------------------------------------------------
+
+Constructor Function
+
+function Car(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.info = function() {
+        return this.make  + " " + this. Model + " " + this. year;
+    };
+}
+var mycar = new Car('Eagle', 'Talon TSi', 1993);
+var kenscar = new Car('Nissan', '300ZX', 1992);
+var vpgscar = new Car('Mazda', 'Miata', 1990);
+------------------------------------------------------------------------------
+adding property (constructor function)
+
+// add a property and method that belong ONLY to mycar, 
+// not another object kenscar
+mycar.price = 500;
+mycar.salePrice = function () { this.price * 3};
+
+// add a property that belongs ONLY to kenscar
+kenscar.owner = “Peter”;
+---------------------------------------------------------------------
+
+cant add property to constructor function, but can add by prototype
+
+function Car(make, model) {
+    this.make = make;
+    this.model = model;
+}
+Car.prototype.year = 2019;
+Car.prototype.info = function() 
+    {return this.make  + " " + this.model + " " + this.year;};
+-------------------------------------------------------------------
+
+class declaration
+-----------------------------
+
+static method called by class
+
+class Point {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    static distance(a, b) {
+        const dx = a.x - b.x;
+        const dy = a.y - b.y;
+
+        return Math.sqrt(dx * dx + dy * dy);
+    }
+}
+
+var p1 = new Point(5, 5);
+var p2 = new Point(10, 10);
+
+console.log(Point.distance(p1, p2));		// output: 7.0710678118654755
+--------------------------------------------------------------------------------
+
+extends keyword is used to create a class as a child of another class
+super keyword to call the constructor of the parent class
+
+class Person {
+    constructor(name) {
+        this.name = name;
+    }
+    speak() {
+        console.log('My name is ' + this.name);
+    }
+}
+
+class Student extends Person {  //subclass of person
+    constructor(name, id) {
+        super(name);            //call parent constructor
+        this.id = id;
+    }
+}
+
+var studentA = new Student('Bob', 's1234567890');
+studentA.speak();			// output: My name is Bob
+
+-------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

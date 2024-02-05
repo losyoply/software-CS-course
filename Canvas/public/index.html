@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    
+    <title>109062306-Canvas</title>
+</head>
+<body style="background-color: black;">
+    <div class="can_and_txt">
+        <canvas id="can" width="600" height="300" style="background-color: white;">不支援</canvas>
+    <textarea name="textBox" id="textBox" cols="30" rows="10" class="text-style"></textarea>
+    </div>
+    <div>
+        <div id="tools" >
+            <span class="lnr lnr-pencil" id="pen"></span>
+            <span class="lnr lnr-book" id="eraser"></span>
+            <span class="lnr lnr-text-format" id="text"></span>
+
+            <span class="lnr lnr-download" onclick="downloadImg();"></span>
+            <span class="lnr lnr-sync" onclick="Refresh();"></span>
+            <span class="lnr lnr-exit-up"  onclick="Upload();"></span>
+            <input type="color" value="#000000" id="color-choose" />
+            <span class="icon-radio-unchecked" id="circle">&#xea56;</span>
+            <span class="icon-checkbox-unchecked" id="rect">&#xea53;</span>
+            <span class="icon-play3" id="triangle">&#xea1c;</span>
+            <span>
+                <select name="font-fami" id="fami">
+                    <option value="orbitron" selected>orbitron</option>
+                    <option value="Arial">Arial</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Impact">Impact</option>
+                </select>
+            </span>
+            <span>
+                <select name="font-size" id="fontSize">
+                    <option value="28" selected>28</option>
+                    <option value="36">36</option>
+                    <option value="44">44</option>
+                    <option value="52">52</option>
+                    <option value="60">60</option>
+                    <option value="68">68</option>
+                    <option value="76">76</option>
+                    <option value="84">84</option>
+                </select>
+            </span>
+            <span class="lnr lnr-undo" id="undo" onclick="cUndo();"></span>
+            <span class="lnr lnr-redo" id="redo" onclick="cRedo();"></span>
+            <span><button onclick="fan();">反轉濾鏡</button></span>
+            <span><button onclick="rip();">陰間濾鏡</button></span>
+            <span><button onclick="fugu();">復古濾鏡</button></span>
+            
+            <div id="brush">粗細: <input type="range" id="text-size" min="1" max="50" value="3"> </div>
+        </div> 
+    </div>
+
+    <script src="index.js"> </script>
+</body>
+</html>
